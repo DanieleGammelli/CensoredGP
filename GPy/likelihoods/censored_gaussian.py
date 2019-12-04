@@ -13,13 +13,6 @@ class CensoredGaussian(Likelihood):
     """
     Censored Gaussian likelihood
 
-    .. math::
-        p(y_{i}|\\lambda(f_{i})) = \\lambda(f_{i})^{y_{i}}(1-f_{i})^{1-y_{i}}
-
-    .. Note::
-        Y takes values in either {-1, 1} or {0, 1}.
-        link function should have the domain [0, 1], e.g. probit (default) or Heaviside
-
     .. See also::
         likelihood.py, for the parent class
     """
@@ -33,7 +26,6 @@ class CensoredGaussian(Likelihood):
 
         super(CensoredGaussian, self).__init__(gp_link, name=name)
 
-        # self.censoring = censoring
         self.variance = Param('variance', variance, Logexp())
         self.link_parameter(self.variance)
 
@@ -84,10 +76,8 @@ class CensoredGaussian(Likelihood):
         else:
             raise ValueError("bad value for censoring_i observation (0, 1)")
 
-        # variance = 0.1
         variance = self.variance.copy()
         if censoring_i == 0:
-            # Substitution of 1 with self.variance
             Z_hat = (1/np.sqrt(2 * np.pi * (variance + 1/tau_i))) * np.exp(-0.5 * ((Y_i - v_i/tau_i)**2)/(variance + 1/tau_i))
             mu_hat = v_i/tau_i + 1/tau_i * ((Y_i - v_i/tau_i)/(variance + 1/tau_i))
             sigma2_hat = 1/tau_i - 1/(tau_i**2 * (variance + 1/tau_i))
