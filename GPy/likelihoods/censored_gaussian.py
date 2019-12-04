@@ -76,8 +76,6 @@ class CensoredGaussian(Likelihood):
         else:
             raise ValueError("bad value for censoring_i observation (0, 1)")
 
-        variance = self.variance.copy()
-        if censoring_i == 0:
             Z_hat = (1/np.sqrt(2 * np.pi * (variance + 1/tau_i))) * np.exp(-0.5 * ((Y_i - v_i/tau_i)**2)/(variance + 1/tau_i))
             mu_hat = v_i/tau_i + 1/tau_i * ((Y_i - v_i/tau_i)/(variance + 1/tau_i))
             sigma2_hat = 1/tau_i - 1/(tau_i**2 * (variance + 1/tau_i))
