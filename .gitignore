@@ -50,3 +50,6 @@ iterate.dat
 
 # pycharm IDE stuff
 .idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints

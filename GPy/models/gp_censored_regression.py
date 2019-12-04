@@ -70,3 +70,18 @@ class GPCensoredRegression(GP):
         input_dict = GPCensoredRegression._format_input_dict(input_dict, data)
         input_dict.pop('name', None)  # Name parameter not required by GPClassification
         return GPCensoredRegression(**input_dict)
+
+    def parameters_changed(self):
+        """
+        Method that is called upon any changes to :class:`~GPy.core.parameterization.param.Param` variables within the model.
+        In particular in the GP class this method re-performs inference, recalculating the posterior and log marginal likelihood and gradients of the model
+
+        .. warning::
+            This method is not designed to be called manually, the framework is set up to automatically call this method upon changes to parameters, if you call
+            this method yourself, there may be unexpected consequences.
+        """
+        self.posterior, self._log_marginal_likelihood, self.grad_dict = self.inference_method.inference(self.kern, self.X, self.likelihood, self.Y_normalized, self.censoring, self.mean_function, self.Y_metadata)
+        self.likelihood.update_gradients(self.grad_dict['dL_dthetaL'])
+        self.kern.update_gradients_full(self.grad_dict['dL_dK'], self.X)
+        if self.mean_function is not None:
+            self.mean_function.update_gradients(self.grad_dict['dL_dm'], self.X)
