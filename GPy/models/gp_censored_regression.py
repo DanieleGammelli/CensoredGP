@@ -85,4 +85,3 @@ class GPCensoredRegression(GP):
         self.kern.update_gradients_full(self.grad_dict['dL_dK'], self.X)
         if self.mean_function is not None:
             self.mean_function.update_gradients(self.grad_dict['dL_dm'], self.X)
-

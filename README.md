@@ -1,3 +1,7 @@
+# Extension of the GPy Library for Censored Gaussian Process Regression
+
+An example showing basic functionality of the extension can be found in CensoredGP_Intro.ipynb.
+
 # GPy
 
 The Gaussian processes framework in Python.
