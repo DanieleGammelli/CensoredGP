@@ -7,8 +7,8 @@ The full paper is available here: [link1](https://arxiv.org/abs/2001.07402), [li
 
 | | |
 |:-------------------------:|:-------------------------:|
-|<img width="1604" alt="Data" src="images/synthetic_1.PNG"> |  <img width="1604" alt="NCGP" src="images/synthetic_2.PNG">|
-|<img width="1604" alt="NCGP-A" src="images/synthetic_3.PNG">  |  <img width="1604" alt="CGP" src="images/synthetic_4.PNG">|
+|<img width="1604" alt="Data" src="images/synthetic_1.png"> |  <img width="1604" alt="NCGP" src="images/synthetic_2.png">|
+|<img width="1604" alt="NCGP-A" src="images/synthetic_3.png">  |  <img width="1604" alt="CGP" src="images/synthetic_4.png">|
 
 The implementation is based on [GPy](https://github.com/SheffieldML/GPy)
 
@@ -52,8 +52,8 @@ The notebook contains:
 
 In our work, we show how the proposed model is able to achieve better performance in capturing the latent non-censored process on a variety of different tasks. Below is a summary of the presented results:
 
-<img align="center" src="images/results_bikes.PNG" width="600"/></td> <br />
-<img align="center" src="images/results_taxi.PNG" width="600"/></td> <br />
+<img align="center" src="images/results_bikes.png" width="600"/></td> <br />
+<img align="center" src="images/results_taxi.png" width="600"/></td> <br />
 
 #### Acknowledgements
 
