@@ -52,8 +52,8 @@ The notebook contains:
 
 In our work, we show how the proposed model is able to achieve better performance in capturing the latent non-censored process on a variety of different tasks. Below is a summary of the presented results:
 
-<img align="center" src="images/result_bikes.png" width="600"/></td> <br />
-<img align="center" src="images/results_taxi.png" width="600"/></td> <br />
+<img align="center" src="images/result_bikes.png" width="1000"/></td> <br />
+<img align="center" src="images/results_taxi.png" width="1000"/></td> <br />
 
 #### Acknowledgements
 
