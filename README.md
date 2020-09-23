@@ -3,7 +3,7 @@
 
 This repository is the official implementation of the CGP, from *Estimating latent demand of shared mobility through censored Gaussian Processes*.
 
-The full paper is available here: [link1](https://arxiv.org/abs/2001.07402), [link2](https://www.sciencedirect.com/science/article/pii/S0968090X20306859?dgcid=author)
+The full paper is available here: [link1](https://arxiv.org/abs/2001.07402), [link2](https://www.sciencedirect.com/science/article/pii/S0968090X20306859?via%3Dihub)
 
 | | |
 |:-------------------------:|:-------------------------:|
