@@ -17,7 +17,7 @@ The implementation is based on [GPy](https://github.com/SheffieldML/GPy)
 This repository contains:
 
 1. `GPy/likelihoods/censored_gaussian.py`: the proposed Censored-Gaussian distribution together with the respective moments for the EP inference procedure (Section 3.4 in the paper)
-2. `GPy/models/gp_censored_regresison.py`: the proposed CGP model
+2. `GPy/models/gp_censored_regression.py`: the proposed CGP model
 
 
 Using the Censored GP in your own GPy code for regression problems is very simple. For example, given (i) a censored dataset {`x`, `y_censored`}, (ii) a kernel function (`kernel`) and (iii) censorship labels (`censoring`), you just need to instatiate a `GPCensoredRegression` model (as you would normally do with GPy objects, e.g. `GPRegression` in the standard GP with homescedastic noise):
